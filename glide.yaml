@@ -12,12 +12,10 @@ import:
   subpackages:
   - helper/schema
   - terraform
-- package: gopkg.in/olivere/elastic.v5
-  version: f698dfea7c6cb058bee5de042f1ad3387f678ab1
+- package: gopkg.in/olivere/elastic.v6
+  version: dabcc5de0a3fd6313870c223c3119e2b1e942ba3
   subpackages:
   - uritemplates
-# - package: gopkg.in/olivere/elastic.v5/uritemplates
-#   version: cf4e58efdcee2e8e7c18dad44d51ed166fb256c2
 - package: github.com/stretchr/testify
   version: ^1.1.4
   subpackages:

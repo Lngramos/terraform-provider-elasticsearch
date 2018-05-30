@@ -1,5 +1,5 @@
-hash: 5399a3eeac6d6f2b1655e85c36a65d5f1b46462ccdbd3777e94cbe4586af4618
-updated: 2018-04-14T17:58:27.185477637-04:00
+hash: 40e4f06e29c99a09ac23ea6f260b62bdac4851e9d6684819d850b613c9597308
+updated: 2018-05-30T12:29:38.842521+01:00
 imports:
 - name: github.com/agext/levenshtein
   version: 5f10fee965225ac1eecdc234c09daf5cd9e7f7b6
@@ -146,6 +146,12 @@ imports:
   version: d1caa6c97c9fc1cc9e83bbe34d0603f9ff0ce8bd
 - name: github.com/jmespath/go-jmespath
   version: bd40a432e4c76585ef6b72d3fd96fb9b6dc7b68d
+- name: github.com/mailru/easyjson
+  version: 8b799c424f57fa123fc63a99d6383bc6e4c02578
+  subpackages:
+  - buffer
+  - jlexer
+  - jwriter
 - name: github.com/mattn/go-colorable
   version: efa589957cd060542a26d2dd7832fd6a6c6c3ade
 - name: github.com/mattn/go-isatty
@@ -166,6 +172,13 @@ imports:
   version: d0303fe809921458f417bcf828397a65db30a7e4
 - name: github.com/mitchellh/reflectwalk
   version: 63d60e9d0dbc60cf9164e6510889b0db6683d98c
+- name: github.com/olivere/elastic
+  version: f1fd7305d0b6270192b27010fe1193568b18e4b6
+  subpackages:
+  - config
+  - uritemplates
+- name: github.com/pkg/errors
+  version: bfd5150e4e41705ded2129ec33379de1cb90b513
 - name: github.com/posener/complete
   version: e037c22b2fcfa85e74495388f03892ed194bba76
   subpackages:
@@ -208,7 +221,6 @@ imports:
   version: d58ca6618b994150e624f6888d871f4709db51a0
   subpackages:
   - context
-  - context/ctxhttp
   - html
   - html/atom
   - http2
@@ -250,8 +262,8 @@ imports:
   - status
   - tap
   - transport
-- name: gopkg.in/olivere/elastic.v5
-  version: f698dfea7c6cb058bee5de042f1ad3387f678ab1
+- name: gopkg.in/olivere/elastic.v6
+  version: dabcc5de0a3fd6313870c223c3119e2b1e942ba3
   subpackages:
   - uritemplates
 testImports: []

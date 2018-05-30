@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/hashicorp/terraform/helper/schema"
-	elastic "gopkg.in/olivere/elastic.v5"
+	elastic "gopkg.in/olivere/elastic.v6"
 )
 
 func resourceElasticsearchSnapshotRepository() *schema.Resource {

@@ -7,7 +7,7 @@ import (
 	"log"
 
 	"github.com/hashicorp/terraform/helper/schema"
-	elastic "gopkg.in/olivere/elastic.v5"
+	elastic "gopkg.in/olivere/elastic.v6"
 )
 
 func resourceElasticsearchKibanaObject() *schema.Resource {
@@ -137,7 +137,7 @@ func resourceElasticsearchKibanaObjectDelete(d *schema.ResourceData, meta interf
 	id := body[0]["_id"].(string)
 	objectType := body[0]["_type"].(string)
 
-	res, err := client.Delete().
+	_, err := client.Delete().
 		Index(d.Get("index").(string)).
 		Type(objectType).
 		Id(id).
@@ -145,10 +145,6 @@ func resourceElasticsearchKibanaObjectDelete(d *schema.ResourceData, meta interf
 
 	if err != nil {
 		return err
-	}
-	if !res.Found {
-		// fmt.Print("Document deleted from from index\n")
-		return fmt.Errorf("failed to delete the object")
 	}
 
 	return nil
